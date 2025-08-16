@@ -1,7 +1,28 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import heroImage from "@/assets/oyster-mushrooms-hero.jpg";
 
 export const Hero = () => {
+  const images = [
+    heroImage,
+    "/lovable-uploads/60a7530c-3c27-40b7-893f-e1c09a8f1469.png",
+    "/lovable-uploads/827e1308-bbc6-4dd3-9551-59711472501c.png",
+    "/lovable-uploads/71373e9f-9fd9-44df-b02a-0f13be9e3b23.png"
+  ];
+
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 2000); // Change every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [api]);
+
   return (
     <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-background to-accent/5">
       <div className="container mx-auto px-6 py-20">
@@ -44,14 +65,24 @@ export const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-hero">
-              <img 
-                src={heroImage} 
-                alt="Fresh Oyster Mushrooms" 
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-            </div>
+            <Carousel className="w-full" setApi={setApi}>
+              <CarouselContent>
+                {images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-hero">
+                      <img 
+                        src={image} 
+                        alt={`Fresh Oyster Mushrooms ${index + 1}`} 
+                        className="w-full h-[600px] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
             <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-3 rounded-xl shadow-soft">
               <div className="text-sm font-medium">200g pack</div>
               <div className="text-2xl font-bold">₹100</div>

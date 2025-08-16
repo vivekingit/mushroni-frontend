@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -30,7 +30,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Address</h4>
-                    <p className="text-muted-foreground">Kannur, Kerala</p>
+                    <p className="text-muted-foreground">Mushroni Organic Farm, Telephone Exchange Road, Kudiyanmala, Kannur, Kerala</p>
                   </div>
                 </div>
 
@@ -50,7 +50,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground">romyjames@mushroni.com</p>
+                    <p className="text-muted-foreground">info.mushroni@gmail.com</p>
                   </div>
                 </div>
 
@@ -61,6 +61,23 @@ export const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Hours</h4>
                     <p className="text-muted-foreground">Mon-Fri: 8AM-6PM<br />Sat: 9AM-4PM<br />Sun: Closed</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Instagram className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Follow Us</h4>
+                    <a 
+                      href="https://www.instagram.com/mushroni_organics?igsh=YzljYTk1ODg3Zg==" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 transition-colors duration-200 font-medium"
+                    >
+                      @mushroni_organics
+                    </a>
                   </div>
                 </div>
               </div>
