@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -40,7 +40,16 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone/WhatsApp</h4>
-                    <p className="text-muted-foreground">6238144505</p>
+                    <p className="text-muted-foreground mb-2">6238144505</p>
+                    <a 
+                      href="https://wa.me/916238144505?text=Hello%20Mushroni,%20I%20would%20like%20to%20inquire%20about%20your%20oyster%20mushrooms."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors duration-200 font-medium"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      Send WhatsApp Message
+                    </a>
                   </div>
                 </div>
 
