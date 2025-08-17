@@ -6,9 +6,8 @@ import heroImage from "@/assets/oyster-mushrooms-hero.jpg";
 export const Hero = () => {
   const images = [
     heroImage,
-    "/lovable-uploads/60a7530c-3c27-40b7-893f-e1c09a8f1469.png",
-    "/lovable-uploads/827e1308-bbc6-4dd3-9551-59711472501c.png",
-    "/lovable-uploads/71373e9f-9fd9-44df-b02a-0f13be9e3b23.png"
+    "/lovable-uploads/a421d872-bf7d-4968-9fe6-20e98b1544d6.png",
+    "/lovable-uploads/827e1308-bbc6-4dd3-9551-59711472501c.png"
   ];
 
   const [api, setApi] = useState<CarouselApi>();
@@ -17,7 +16,11 @@ export const Hero = () => {
     if (!api) return;
 
     const interval = setInterval(() => {
-      api.scrollNext();
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api.scrollTo(0); // Reset to first image to loop continuously
+      }
     }, 2000); // Change every 2 seconds
 
     return () => clearInterval(interval);

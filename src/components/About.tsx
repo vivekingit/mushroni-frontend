@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sprout, Users, Award, Truck } from "lucide-react";
+import { Sprout, Users, Award, Truck, Utensils, GraduationCap } from "lucide-react";
 
 export const About = () => {
   const features = [
@@ -23,11 +23,21 @@ export const About = () => {
       icon: Truck,
       title: "Fast Delivery",
       description: "Fresh mushrooms delivered within 24 hours of harvest to maintain peak flavor and nutritional value."
+    },
+    {
+      icon: Utensils,
+      title: "Farm to Table",
+      description: "Direct from our organic farm to your plate with no middlemen, ensuring maximum freshness and quality."
+    },
+    {
+      icon: GraduationCap,
+      title: "Expert Cultivation",
+      description: "Years of specialized knowledge in mushroom cultivation using advanced growing methods and quality control."
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-6 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-accent text-accent-foreground">About Mushroni</Badge>
@@ -39,7 +49,7 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <Card key={index} className="text-center shadow-soft hover:shadow-hero transition-all duration-300 hover:-translate-y-2">
               <CardContent className="pt-8">

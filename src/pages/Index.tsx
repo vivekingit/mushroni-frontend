@@ -5,6 +5,7 @@ import { ProductDetails } from "@/components/ProductDetails";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { FloatingOrderButton } from "@/components/FloatingOrderButton";
 
 const Index = () => {
   const logo = "/lovable-uploads/907b3cdc-0698-4c5d-9d75-fe6dce266707.png";
@@ -17,6 +18,7 @@ const Index = () => {
       <About />
       <Contact />
       <Footer />
+      <FloatingOrderButton />
     </div>
   );
 };

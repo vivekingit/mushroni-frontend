@@ -34,7 +34,7 @@ export const ProductDetails = () => {
   ];
 
   return (
-    <section id="products" className="py-20 bg-gradient-accent">
+    <section id="products" className="py-12 bg-gradient-accent">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-secondary text-secondary-foreground">Our Flagship Product</Badge>

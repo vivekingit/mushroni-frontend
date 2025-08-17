@@ -8,9 +8,9 @@ import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle } from "lucide-rea
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-accent">
+    <section id="contact" className="py-2 bg-gradient-accent">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <Badge className="mb-4 bg-secondary text-secondary-foreground">Get In Touch</Badge>
           <h2 className="text-4xl font-bold text-foreground mb-4">Contact Mushroni</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -19,7 +19,7 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
@@ -103,47 +103,6 @@ export const Contact = () => {
               </Button>
             </div>
           </div>
-
-          <Card className="shadow-hero">
-            <CardHeader>
-              <CardTitle className="text-primary">Send us a Message</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="first-name">First Name</Label>
-                  <Input id="first-name" placeholder="John" />
-                </div>
-                <div>
-                  <Label htmlFor="last-name">Last Name</Label>
-                  <Input id="last-name" placeholder="Doe" />
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="john@example.com" />
-              </div>
-
-              <div>
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="Order inquiry" />
-              </div>
-
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell us about your mushroom needs..."
-                  className="min-h-[120px]"
-                />
-              </div>
-
-              <Button className="w-full bg-gradient-hero text-primary-foreground shadow-soft hover:shadow-hero transition-all duration-300">
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
