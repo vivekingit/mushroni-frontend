@@ -7,7 +7,8 @@ export const Hero = () => {
   const images = [
     heroImage,
     "/lovable-uploads/a421d872-bf7d-4968-9fe6-20e98b1544d6.png",
-    "/lovable-uploads/64d1b4c4-f155-47ad-821b-b9da91d351ef.png"
+    "/lovable-uploads/64d1b4c4-f155-47ad-821b-b9da91d351ef.png",
+    "/lovable-uploads/3c2bc11f-edf7-4bdf-9fca-61f5c737f902.png"
   ];
 
   const [api, setApi] = useState<CarouselApi>();
